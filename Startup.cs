@@ -30,11 +30,9 @@ namespace Tarea8_P3
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<WeatherForecastService>();
 
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<WeatherForecastService>();
             services.AddDbContext<vacunadosDbContext>(options =>
             {
                 options.UseSqlite("Data Source = DBV3.db");

@@ -5,21 +5,27 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tarea8_P3.Data;
 
-namespace __tarea7.Migrations
+namespace Tarea8_P3.Migrations
 {
     [DbContext(typeof(vacunadosDbContext))]
-    [Migration("20210311191906_Initial-Commit")]
-    partial class InitialCommit
+    [Migration("20210317194810_Base-de-Datos-Creada")]
+    partial class BasedeDatosCreada
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "5.0.3");
+                .HasAnnotation("ProductVersion", "5.0.4");
 
-            modelBuilder.Entity("__tarea7.Data.vacunados", b =>
+            modelBuilder.Entity("Tarea8_P3.Data.vacunados", b =>
                 {
                     b.Property<string>("Id")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Latitud")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Longitud")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("apellido")

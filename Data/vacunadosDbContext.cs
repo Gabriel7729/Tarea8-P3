@@ -25,16 +25,12 @@ namespace Tarea8_P3.Data
         }
         #endregion
 
-
         #region Private methods
         private List<vacunados> GetProducts()
         {
             return new List<vacunados>
             {
-                new   vacunados { Id = "h", nombre = "Laptop", apellido = "ramirez", telefono = 10, tipoVacuna ="This is a best gaming laptop"},
-                new vacunados { Id = "d", nombre = "Microsoft Office", apellido = "ramirez", telefono = 50, tipoVacuna ="This is a Office Application"},
-                new vacunados { Id = "t", nombre = "Lazer Mouse", apellido = "ramirez", telefono = 20, tipoVacuna ="The mouse that works on all surface"},
-              new vacunados { Id = "g", nombre = "USB Storage", apellido = "ramirez", telefono = 20, tipoVacuna ="To store 256GB of data", fechaNacimiento ="a",provincia= "c",fecahDosis1="f",fecahDosis2 = "f"}
+                
             };
         }
         #endregion

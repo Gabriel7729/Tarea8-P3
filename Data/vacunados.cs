@@ -15,6 +15,9 @@ namespace Tarea8_P3.Data
         public string fecahDosis1 { get; set; }
         public string fecahDosis2 { get; set; }
 
+        public string Latitud { get; set; }
+        public string Longitud { get; set; }
+
         public String SignoZodiacal(DateTime fecha)
         {
             int mes = fecha.Month;

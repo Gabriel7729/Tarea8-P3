@@ -52,6 +52,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.4, )"
+            },
+            "Radzen.Blazor": {
+              "target": "Package",
+              "version": "[3.1.6, )"
             }
           },
           "imports": [
