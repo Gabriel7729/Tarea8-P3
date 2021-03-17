@@ -1448,23 +1448,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lusan\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\LUIS ANTONIO DE AZA\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lusan\\Desktop\\ITLA QUINTO CUATRIMESTRE\\Programación 3 - Amadis Suarez\\Tarea8-P3\\Tarea8-P3.csproj",
+      "projectUniqueName": "C:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tarea8\\Tarea8-P3\\Tarea8-P3.csproj",
       "projectName": "Tarea8-P3",
-      "projectPath": "C:\\Users\\Lusan\\Desktop\\ITLA QUINTO CUATRIMESTRE\\Programación 3 - Amadis Suarez\\Tarea8-P3\\Tarea8-P3.csproj",
-      "packagesPath": "C:\\Users\\Lusan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lusan\\Desktop\\ITLA QUINTO CUATRIMESTRE\\Programación 3 - Amadis Suarez\\Tarea8-P3\\obj\\",
+      "projectPath": "C:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tarea8\\Tarea8-P3\\Tarea8-P3.csproj",
+      "packagesPath": "C:\\Users\\LUIS ANTONIO DE AZA\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tarea8\\Tarea8-P3\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Lusan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LUIS ANTONIO DE AZA\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -19,7 +19,7 @@
                     <input type="text" class="form-check form-control" @bind="@cedula" />
                     <button class="btn btn-primary" @onclick="@buscarPersona" style="margin-top:5px; margin:20px;">Verificar</button>
                 </div>
-                if(registroAgregado == true)
+                if (registroAgregado == true)
                 {
                     <p class="alert alert-success">Registro de vacuna agregado</p>
                 }
@@ -54,15 +54,15 @@
                     </select>
 
                     <label for="exampleFormControlSelect1"> <strong>Cantidades de vacunas : </strong></label>
-                      <div>
-                      <label for="exampleFormControlSelect1"> Tipo A: 150 </label>
-                      </div>
-                      <div>
-                      <label for="exampleFormControlSelect1"> Tipo B: 115 </label>
-                      </div>
-                      <div>
-                      <label for="exampleFormControlSelect1"> Tipo C: 0 </label>
-                      </div>
+                    <div>
+                        <label for="exampleFormControlSelect1"> Tipo A: 150 </label>
+                    </div>
+                    <div>
+                        <label for="exampleFormControlSelect1"> Tipo B: 115 </label>
+                    </div>
+                    <div>
+                        <label for="exampleFormControlSelect1"> Tipo C: 0 </label>
+                    </div>
                 </div>
 
                 //select provincias
@@ -105,14 +105,23 @@
                     </select>
                 </div>
                 BotonAgregar = true;
+
+                <div class="alert alert-primary">
+                    <strong>Latitud</strong>
+                    <input class="form form-control" @bind="@latitud"/>
+                </div>
+                <div class="alert alert-primary">
+                    <strong>longitud</strong>
+                    <input class=" form form-control" @bind="@longitud" />
+                </div>
             }
 
 
             @if (tipoDeVacuna != "-- Sin seleccionar --" && tipoDeVacuna != "Vacuna tipo C" && provincia != "-- Sin seleccionar --" && BotonAgregar == true)
             {
-            <center>
-            <button class="btn btn-success" @onclick="nuevoVacunado" style="margin:20px;">Agregar Registro</button>
-            </center>
+                <center>
+                    <button class="btn btn-success" @onclick="nuevoVacunado" style="margin:20px;">Agregar Registro</button>
+                </center>
             }
 
 
@@ -121,12 +130,12 @@
         <div class="col-md-6">
             @if (existe == true)
             {
-                 <div class="header">
+                <div class="header">
                     <h1 class="alert alert-info">Vacunado encontrado</h1>
-                 </div>
-                 <div class="text-center">
-                     <p class="alert alert-success">Esta persona se encuentra en el registros</p>
-                 </div>
+                </div>
+                <div class="text-center">
+                    <p class="alert alert-success">Esta persona se encuentra en el registros</p>
+                </div>
                 <p class="alert alert-primary"><strong>Nombre : </strong>@resultado.Nombres </p>
                 <p class="alert alert-primary"><strong>Apellido :</strong> @resultado.Apellido1 @resultado.Apellido2</p>
                 <p class="alert alert-primary"><strong>Telefono :</strong> @TelefonoR </p>
@@ -136,6 +145,9 @@
                 <div class="alert alert-primary">
                     <p>agregar fecha de 2da dosis</p><input type="date" @bind="@fechaDosis2" class="form-check form-control" style="width:200px" />
                 </div>
+
+
+
                 <div class="text-center" style="margin-bottom:50px">
                     <button class="btn btn-primary" @onclick="@dosis2" style="margin:15px;">Agregar</button>
                 </div>
@@ -144,6 +156,8 @@
             {
                 <p class="alert alert-success">!Listo, fecha agregada, esta persona tiene las 2 dosis</p>
             }
+
+
         </div>
     </div>
 </div>
@@ -200,6 +214,8 @@
     bool vc2 = false;
     bool tieneLas2 = false;
     bool BotonAgregar = false;
+    String latitud;
+    String longitud;
 
     String cedula;
     String tipoDeVacuna = "-- Sin seleccionar --";
@@ -310,6 +326,8 @@
         NewProduct.fecahDosis2 = "Sin recibir";
         NewProduct.telefono = telefono;
         NewProduct.Id = cedula;
+        NewProduct.Latitud = latitud;
+        NewProduct.Longitud = longitud;
         AddNewProduct();
         consulta = false;
         cedula = "";

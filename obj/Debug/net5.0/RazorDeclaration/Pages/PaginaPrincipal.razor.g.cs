@@ -13,91 +13,91 @@ namespace Tarea8_P3.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "c:\Users\Lusan\Desktop\ITLA QUINTO CUATRIMESTRE\Programación 3 - Amadis Suarez\Tarea8-P3\_Imports.razor"
+#line 1 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "c:\Users\Lusan\Desktop\ITLA QUINTO CUATRIMESTRE\Programación 3 - Amadis Suarez\Tarea8-P3\_Imports.razor"
+#line 2 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "c:\Users\Lusan\Desktop\ITLA QUINTO CUATRIMESTRE\Programación 3 - Amadis Suarez\Tarea8-P3\_Imports.razor"
+#line 3 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "c:\Users\Lusan\Desktop\ITLA QUINTO CUATRIMESTRE\Programación 3 - Amadis Suarez\Tarea8-P3\_Imports.razor"
+#line 4 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "c:\Users\Lusan\Desktop\ITLA QUINTO CUATRIMESTRE\Programación 3 - Amadis Suarez\Tarea8-P3\_Imports.razor"
+#line 5 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "c:\Users\Lusan\Desktop\ITLA QUINTO CUATRIMESTRE\Programación 3 - Amadis Suarez\Tarea8-P3\_Imports.razor"
+#line 6 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "c:\Users\Lusan\Desktop\ITLA QUINTO CUATRIMESTRE\Programación 3 - Amadis Suarez\Tarea8-P3\_Imports.razor"
+#line 7 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "c:\Users\Lusan\Desktop\ITLA QUINTO CUATRIMESTRE\Programación 3 - Amadis Suarez\Tarea8-P3\_Imports.razor"
+#line 8 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "c:\Users\Lusan\Desktop\ITLA QUINTO CUATRIMESTRE\Programación 3 - Amadis Suarez\Tarea8-P3\_Imports.razor"
+#line 9 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\_Imports.razor"
 using Tarea8_P3;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "c:\Users\Lusan\Desktop\ITLA QUINTO CUATRIMESTRE\Programación 3 - Amadis Suarez\Tarea8-P3\_Imports.razor"
+#line 10 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\_Imports.razor"
 using Tarea8_P3.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "c:\Users\Lusan\Desktop\ITLA QUINTO CUATRIMESTRE\Programación 3 - Amadis Suarez\Tarea8-P3\_Imports.razor"
+#line 11 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\_Imports.razor"
 using Radzen;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "c:\Users\Lusan\Desktop\ITLA QUINTO CUATRIMESTRE\Programación 3 - Amadis Suarez\Tarea8-P3\_Imports.razor"
+#line 12 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\_Imports.razor"
 using Radzen.Blazor;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "c:\Users\Lusan\Desktop\ITLA QUINTO CUATRIMESTRE\Programación 3 - Amadis Suarez\Tarea8-P3\Pages\PaginaPrincipal.razor"
+#line 2 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\Pages\PaginaPrincipal.razor"
 using Data;
 
 #line default

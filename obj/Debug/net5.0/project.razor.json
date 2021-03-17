@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\Lusan\\Desktop\\ITLA QUINTO CUATRIMESTRE\\Programación 3 - Amadis Suarez\\Tarea8-P3\\Tarea8-P3.csproj",
+  "FilePath": "c:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tarea8\\Tarea8-P3\\Tarea8-P3.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -59669,73 +59669,73 @@
   "RootNamespace": "Tarea8_P3",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\Lusan\\Desktop\\ITLA QUINTO CUATRIMESTRE\\Programación 3 - Amadis Suarez\\Tarea8-P3\\Shared\\SurveyPrompt.razor",
-      "TargetPath": "Shared\\SurveyPrompt.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\Lusan\\Desktop\\ITLA QUINTO CUATRIMESTRE\\Programación 3 - Amadis Suarez\\Tarea8-P3\\Pages\\Index.razor",
-      "TargetPath": "Pages\\Index.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\Lusan\\Desktop\\ITLA QUINTO CUATRIMESTRE\\Programación 3 - Amadis Suarez\\Tarea8-P3\\_Imports.razor",
-      "TargetPath": "_Imports.razor",
-      "FileKind": "componentImport"
-    },
-    {
-      "FilePath": "c:\\Users\\Lusan\\Desktop\\ITLA QUINTO CUATRIMESTRE\\Programación 3 - Amadis Suarez\\Tarea8-P3\\Pages\\ConsultaVacunados.razor",
-      "TargetPath": "Pages\\ConsultaVacunados.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\Lusan\\Desktop\\ITLA QUINTO CUATRIMESTRE\\Programación 3 - Amadis Suarez\\Tarea8-P3\\Shared\\MainLayout.razor",
-      "TargetPath": "Shared\\MainLayout.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\Lusan\\Desktop\\ITLA QUINTO CUATRIMESTRE\\Programación 3 - Amadis Suarez\\Tarea8-P3\\Pages\\_Host.cshtml",
+      "FilePath": "c:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tarea8\\Tarea8-P3\\Pages\\_Host.cshtml",
       "TargetPath": "Pages\\_Host.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Lusan\\Desktop\\ITLA QUINTO CUATRIMESTRE\\Programación 3 - Amadis Suarez\\Tarea8-P3\\Pages\\VerRegistroMapa.razor",
-      "TargetPath": "Pages\\VerRegistroMapa.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\Lusan\\Desktop\\ITLA QUINTO CUATRIMESTRE\\Programación 3 - Amadis Suarez\\Tarea8-P3\\Pages\\AnularRegistro.razor",
+      "FilePath": "c:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tarea8\\Tarea8-P3\\Pages\\AnularRegistro.razor",
       "TargetPath": "Pages\\AnularRegistro.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\Lusan\\Desktop\\ITLA QUINTO CUATRIMESTRE\\Programación 3 - Amadis Suarez\\Tarea8-P3\\Pages\\Error.cshtml",
-      "TargetPath": "Pages\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Lusan\\Desktop\\ITLA QUINTO CUATRIMESTRE\\Programación 3 - Amadis Suarez\\Tarea8-P3\\Pages\\Counter.razor",
-      "TargetPath": "Pages\\Counter.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\Lusan\\Desktop\\ITLA QUINTO CUATRIMESTRE\\Programación 3 - Amadis Suarez\\Tarea8-P3\\Shared\\NavMenu.razor",
-      "TargetPath": "Shared\\NavMenu.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\Lusan\\Desktop\\ITLA QUINTO CUATRIMESTRE\\Programación 3 - Amadis Suarez\\Tarea8-P3\\Pages\\RegistrarVacuna.razor",
+      "FilePath": "c:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tarea8\\Tarea8-P3\\Pages\\RegistrarVacuna.razor",
       "TargetPath": "Pages\\RegistrarVacuna.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\Lusan\\Desktop\\ITLA QUINTO CUATRIMESTRE\\Programación 3 - Amadis Suarez\\Tarea8-P3\\Pages\\PaginaPrincipal.razor",
-      "TargetPath": "Pages\\PaginaPrincipal.razor",
+      "FilePath": "c:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tarea8\\Tarea8-P3\\Pages\\Index.razor",
+      "TargetPath": "Pages\\Index.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\Lusan\\Desktop\\ITLA QUINTO CUATRIMESTRE\\Programación 3 - Amadis Suarez\\Tarea8-P3\\App.razor",
+      "FilePath": "c:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tarea8\\Tarea8-P3\\Shared\\MainLayout.razor",
+      "TargetPath": "Shared\\MainLayout.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tarea8\\Tarea8-P3\\_Imports.razor",
+      "TargetPath": "_Imports.razor",
+      "FileKind": "componentImport"
+    },
+    {
+      "FilePath": "c:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tarea8\\Tarea8-P3\\Pages\\ConsultaVacunados.razor",
+      "TargetPath": "Pages\\ConsultaVacunados.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tarea8\\Tarea8-P3\\Pages\\VerRegistroMapa.razor",
+      "TargetPath": "Pages\\VerRegistroMapa.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tarea8\\Tarea8-P3\\App.razor",
       "TargetPath": "App.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tarea8\\Tarea8-P3\\Pages\\Counter.razor",
+      "TargetPath": "Pages\\Counter.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tarea8\\Tarea8-P3\\Shared\\NavMenu.razor",
+      "TargetPath": "Shared\\NavMenu.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tarea8\\Tarea8-P3\\Pages\\Error.cshtml",
+      "TargetPath": "Pages\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tarea8\\Tarea8-P3\\Shared\\SurveyPrompt.razor",
+      "TargetPath": "Shared\\SurveyPrompt.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tarea8\\Tarea8-P3\\Pages\\PaginaPrincipal.razor",
+      "TargetPath": "Pages\\PaginaPrincipal.razor",
       "FileKind": "component"
     }
   ],
