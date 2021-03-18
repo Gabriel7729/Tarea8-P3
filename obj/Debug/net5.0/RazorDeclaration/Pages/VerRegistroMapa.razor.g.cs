@@ -8,90 +8,117 @@ namespace Tarea8_P3.Pages
 {
     #line hidden
     using System;
-    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\_Imports.razor"
+#line 1 "c:\Users\Lusan\Desktop\Tarea8-P3\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\_Imports.razor"
+#line 2 "c:\Users\Lusan\Desktop\Tarea8-P3\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\_Imports.razor"
+#line 3 "c:\Users\Lusan\Desktop\Tarea8-P3\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\_Imports.razor"
+#line 4 "c:\Users\Lusan\Desktop\Tarea8-P3\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\_Imports.razor"
+#line 5 "c:\Users\Lusan\Desktop\Tarea8-P3\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\_Imports.razor"
+#line 6 "c:\Users\Lusan\Desktop\Tarea8-P3\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\_Imports.razor"
+#line 7 "c:\Users\Lusan\Desktop\Tarea8-P3\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\_Imports.razor"
+#line 8 "c:\Users\Lusan\Desktop\Tarea8-P3\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\_Imports.razor"
+#line 9 "c:\Users\Lusan\Desktop\Tarea8-P3\_Imports.razor"
 using Tarea8_P3;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\_Imports.razor"
+#line 10 "c:\Users\Lusan\Desktop\Tarea8-P3\_Imports.razor"
 using Tarea8_P3.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\_Imports.razor"
+#line 11 "c:\Users\Lusan\Desktop\Tarea8-P3\_Imports.razor"
 using Radzen;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\_Imports.razor"
+#line 12 "c:\Users\Lusan\Desktop\Tarea8-P3\_Imports.razor"
 using Radzen.Blazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "c:\Users\Lusan\Desktop\Tarea8-P3\_Imports.razor"
+using System.Net;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 14 "c:\Users\Lusan\Desktop\Tarea8-P3\_Imports.razor"
+using System.Collections.Generic;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 15 "c:\Users\Lusan\Desktop\Tarea8-P3\_Imports.razor"
+using Newtonsoft.Json;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "c:\Users\Lusan\Desktop\Tarea8-P3\Pages\VerRegistroMapa.razor"
+using Data;
 
 #line default
 #line hidden
@@ -105,22 +132,87 @@ using Radzen.Blazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 22 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tarea8\Tarea8-P3\Pages\VerRegistroMapa.razor"
+#line 46 "c:\Users\Lusan\Desktop\Tarea8-P3\Pages\VerRegistroMapa.razor"
        
-    int zoom = 3;
+    int zoom = 6;
     bool showMadridMarker;
+    List<vacunados> Vacunados = new List<vacunados>();
+    vacunados ActualizarVacunados = new vacunados();
+    bool Validacion = false;
+
+    double Latitud, Longitud;
+
+    string Nombre, Apellido, ID, TipoDeVacuna, FechaDeDosis1, FechaDeDosis2, Foto;
 
     void OnMapClick(GoogleMapClickEventArgs args)
     {
     }
 
+
+    string Realizar(string Id)
+    {
+        string URL = "https://api.adamix.net/apec/cedula/";
+        WebClient nn = new WebClient();
+        URL = URL + Id;
+        var datas = nn.DownloadString(URL);
+        var rs = JsonConvert.DeserializeObject<Results>(datas);
+
+        Foto = rs.foto;
+        return Foto;
+    }
+
     void OnMarkerClick(RadzenGoogleMapMarker marker)
     {
+        foreach (var vacun in Vacunados)
+        {
+            if (marker.Title == vacun.nombre)
+            {
+                ID = vacun.Id;
+                Nombre = vacun.nombre;
+                Apellido = vacun.apellido;
+                TipoDeVacuna = vacun.tipoVacuna;
+                FechaDeDosis1 = vacun.fecahDosis1;
+                FechaDeDosis2 = vacun.fecahDosis2;
+                Validacion = true;
+
+            }
+        }
     }
+
+    void ShowNotification(NotificationMessage message)
+    {
+        NotificationService.Notify(message);
+    }
+
+    //Codigo para poder visualizar los datos de la Base de Datos
+    protected override async Task OnInitializedAsync()
+    {
+        await RefreshVacunados();
+    }
+
+    private void SetProductForUpdate(vacunados vacun)
+    {
+        ActualizarVacunados = vacun;
+    }
+
+    private async Task RefreshVacunados()
+    {
+        Vacunados = await service.GetProductAsync();
+    }
+
+    private async Task DeleteVacunados(vacunados vacun)
+    {
+        await service.DeleteProductAsync(vacun);
+        await RefreshVacunados();
+    }
+
+
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NotificationService NotificationService { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private vacunadosServices service { get; set; }
     }
 }
 #pragma warning restore 1591

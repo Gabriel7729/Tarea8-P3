@@ -1,33 +1,120 @@
 ﻿@page "/VerRegistroMapa"
+@using Data
+@inject vacunadosServices service
+@inject NotificationService NotificationService
 
 <div class="row">
     <div class="col-xl-6">
-        <h3>
-            Show marker for Madrid
-            <RadzenCheckBox @bind-Value=@showMadridMarker />
-        </h3>
-        <RadzenGoogleMap style="height: 400px" Zoom=@zoom Center=@(new GoogleMapPosition() { Lat = 42.6977, Lng = 23.3219 }) MapClick=@OnMapClick MarkerClick=@OnMarkerClick>
-            <Markers>
-                <RadzenGoogleMapMarker Title="London" Label="London" Position=@(new GoogleMapPosition() { Lat = 51.5074, Lng = 0.1278 }) />
-                <RadzenGoogleMapMarker Title="Paris " Label="Paris" Position=@(new GoogleMapPosition() { Lat = 48.8566, Lng = 2.3522 }) />
-                @if (showMadridMarker)
-                {
-                    <RadzenGoogleMapMarker Title="Madrid " Label="Madrid" Position=@(new GoogleMapPosition() { Lat = 40.4168, Lng = -3.7038 }) />
-                }
-            </Markers>
-        </RadzenGoogleMap>
+        <RadzenCard Style="height:25rem;">
+            <RadzenGoogleMap style="height: 400px" Zoom=@zoom Center=@(new GoogleMapPosition() { Lat = 19.097843347007565, Lng = -70.70913160956104 }) MapClick=@OnMapClick MarkerClick=@OnMarkerClick>
+                <Markers>
+                    @foreach (var vacun in Vacunados)
+                    {
+                        Latitud = Convert.ToDouble(vacun.Latitud);
+                        Longitud = Convert.ToDouble(vacun.Longitud);
+                        <RadzenGoogleMapMarker Title="@vacun.nombre" Label="@vacun.nombre" Position=@(new GoogleMapPosition() { Lat = Latitud, Lng = Longitud }) />
+                    }
+                </Markers>
+            </RadzenGoogleMap>
+        </RadzenCard>
+    </div>
+    <div class="col-xl-6">
+        <RadzenCard Style="height:25rem;">
+            @if (Validacion)
+            {
+                <h3 class="text-center"><strong> Datos de @Nombre </strong></h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <br /><br />
+                        <p><strong>ID: </strong>@ID</p><br />
+                        <p><strong>Nombre: </strong>@Nombre</p><br />
+                        <p><strong>Apellido: </strong>@Apellido</p><br />
+                        <p><strong>TipoDeVacuna: </strong>@TipoDeVacuna</p><br />
+                        <p><strong>Fecha de la primera Dosis: </strong>@FechaDeDosis1</p><br />
+                        <p><strong>Fecha de la segunda Dosis: </strong>@FechaDeDosis2</p>
+                    </div>
+                    <div class="col-md-6">
+                        <br /><br />
+                        <img src="@Realizar(ID)" class="rounded mx-auto d-block" width="270" height="250" />
+                    </div>
+                </div>
+            }
+        </RadzenCard>
     </div>
 </div>
 
 @code {
-    int zoom = 3;
+    int zoom = 6;
     bool showMadridMarker;
+    List<vacunados> Vacunados = new List<vacunados>();
+    vacunados ActualizarVacunados = new vacunados();
+    bool Validacion = false;
+
+    double Latitud, Longitud;
+
+    string Nombre, Apellido, ID, TipoDeVacuna, FechaDeDosis1, FechaDeDosis2, Foto;
 
     void OnMapClick(GoogleMapClickEventArgs args)
     {
     }
 
+
+    string Realizar(string Id)
+    {
+        string URL = "https://api.adamix.net/apec/cedula/";
+        WebClient nn = new WebClient();
+        URL = URL + Id;
+        var datas = nn.DownloadString(URL);
+        var rs = JsonConvert.DeserializeObject<Results>(datas);
+
+        Foto = rs.foto;
+        return Foto;
+    }
+
     void OnMarkerClick(RadzenGoogleMapMarker marker)
     {
+        foreach (var vacun in Vacunados)
+        {
+            if (marker.Title == vacun.nombre)
+            {
+                ID = vacun.Id;
+                Nombre = vacun.nombre;
+                Apellido = vacun.apellido;
+                TipoDeVacuna = vacun.tipoVacuna;
+                FechaDeDosis1 = vacun.fecahDosis1;
+                FechaDeDosis2 = vacun.fecahDosis2;
+                Validacion = true;
+
+            }
+        }
     }
+
+    void ShowNotification(NotificationMessage message)
+    {
+        NotificationService.Notify(message);
+    }
+
+    //Codigo para poder visualizar los datos de la Base de Datos
+    protected override async Task OnInitializedAsync()
+    {
+        await RefreshVacunados();
+    }
+
+    private void SetProductForUpdate(vacunados vacun)
+    {
+        ActualizarVacunados = vacun;
+    }
+
+    private async Task RefreshVacunados()
+    {
+        Vacunados = await service.GetProductAsync();
+    }
+
+    private async Task DeleteVacunados(vacunados vacun)
+    {
+        await service.DeleteProductAsync(vacun);
+        await RefreshVacunados();
+    }
+
+
 }

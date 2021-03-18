@@ -166,7 +166,6 @@
 
 
 
-
 @code {
 
     public class Persona
@@ -209,6 +208,7 @@
         public string foto { get; set; }
     }
 
+    string foto;
     bool consulta = false;
     bool existe = false;
     bool vc2 = false;
@@ -296,6 +296,7 @@
         if (resultado.ok)
         {
             consulta = true;
+            foto = resultado.foto;
         }
         else
         {
@@ -326,8 +327,8 @@
         NewProduct.fecahDosis2 = "Sin recibir";
         NewProduct.telefono = telefono;
         NewProduct.Id = cedula;
-        NewProduct.Latitud = latitud;
-        NewProduct.Longitud = longitud;
+        NewProduct.Latitud = latitud.Replace(".",",");
+        NewProduct.Longitud = longitud.Replace(".",",");
         AddNewProduct();
         consulta = false;
         cedula = "";

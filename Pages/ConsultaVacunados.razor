@@ -50,6 +50,8 @@
                 <th>Fecha dosis 1</th>
                 <th>Fecha dosis 2</th>
                 <th>Provincia</th>
+                <th>Latitud</th>
+                <th>Longitud</th>
             </tr>
         </thead>
         <tbody>
@@ -341,7 +343,7 @@ else
         </select>
     </div>
 
-    <table class="table table-bordered table-hover" id="example">
+    <table class="table table-bordered table-hover">
         <thead class="thead-dark">
             <tr>
                 <th>Id</th>
@@ -353,6 +355,8 @@ else
                 <th>Fecha dosis 1</th>
                 <th>Fecha dosis 2</th>
                 <th>Provincia</th>
+                <th>Latitud</th>
+                <th>Longitud</th>
             </tr>
         </thead>
         <tbody>
@@ -362,17 +366,19 @@ else
         {
             if (provincia == vacun.provincia)
             {
-                <tr>
-                    <td>@vacun.Id</td>
-                    <td>@vacun.nombre</td>
-                    <td>@vacun.apellido</td>
-                    <td>@vacun.telefono</td>
-                    <td>@vacun.fechaNacimiento</td>
-                    <td>@vacun.tipoVacuna</td>
-                    <td>@vacun.fecahDosis1</td>
-                    <td>@vacun.fecahDosis2</td>
-                    <td>@vacun.provincia</td>
-                </tr>
+            <tr>
+                <td>@vacun.Id</td>
+                <td>@vacun.nombre</td>
+                <td>@vacun.apellido</td>
+                <td>@vacun.telefono</td>
+                <td>@vacun.fechaNacimiento</td>
+                <td>@vacun.tipoVacuna</td>
+                <td>@vacun.fecahDosis1</td>
+                <td>@vacun.fecahDosis2</td>
+                <td>@vacun.provincia</td>
+                <td>@vacun.Latitud</td>
+                <td>@vacun.Longitud</td>
+            </tr>
             }
 
         } }

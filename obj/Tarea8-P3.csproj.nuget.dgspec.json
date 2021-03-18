@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tarea8\\Tarea8-P3\\Tarea8-P3.csproj": {}
+    "C:\\Users\\Lusan\\Desktop\\Tarea8-P3\\Tarea8-P3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tarea8\\Tarea8-P3\\Tarea8-P3.csproj": {
+    "C:\\Users\\Lusan\\Desktop\\Tarea8-P3\\Tarea8-P3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tarea8\\Tarea8-P3\\Tarea8-P3.csproj",
+        "projectUniqueName": "C:\\Users\\Lusan\\Desktop\\Tarea8-P3\\Tarea8-P3.csproj",
         "projectName": "Tarea8-P3",
-        "projectPath": "C:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tarea8\\Tarea8-P3\\Tarea8-P3.csproj",
-        "packagesPath": "C:\\Users\\LUIS ANTONIO DE AZA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tarea8\\Tarea8-P3\\obj\\",
+        "projectPath": "C:\\Users\\Lusan\\Desktop\\Tarea8-P3\\Tarea8-P3.csproj",
+        "packagesPath": "C:\\Users\\Lusan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lusan\\Desktop\\Tarea8-P3\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\LUIS ANTONIO DE AZA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lusan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -50,9 +53,21 @@
               "target": "Package",
               "version": "[5.0.4, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
             "Radzen.Blazor": {
               "target": "Package",
               "version": "[3.1.6, )"
+            },
+            "RestClient": {
+              "target": "Package",
+              "version": "[3.0.0.21, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.11.7, )"
             }
           },
           "imports": [
