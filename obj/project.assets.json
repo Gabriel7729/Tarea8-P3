@@ -1709,24 +1709,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lusan\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\a\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lusan\\Desktop\\Tarea8-P3\\Tarea8-P3.csproj",
+      "projectUniqueName": "C:\\Users\\a\\Downloads\\Telegram Desktop\\Tarea8-P3\\Tarea8-P3\\Tarea8-P3.csproj",
       "projectName": "Tarea8-P3",
-      "projectPath": "C:\\Users\\Lusan\\Desktop\\Tarea8-P3\\Tarea8-P3.csproj",
-      "packagesPath": "C:\\Users\\Lusan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lusan\\Desktop\\Tarea8-P3\\obj\\",
+      "projectPath": "C:\\Users\\a\\Downloads\\Telegram Desktop\\Tarea8-P3\\Tarea8-P3\\Tarea8-P3.csproj",
+      "packagesPath": "C:\\Users\\a\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\a\\Downloads\\Telegram Desktop\\Tarea8-P3\\Tarea8-P3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Lusan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\a\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"

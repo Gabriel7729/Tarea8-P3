@@ -1,7 +1,6 @@
 ﻿@page "/VerRegistroMapa"
 @using Data
 @inject vacunadosServices service
-@inject NotificationService NotificationService
 
 <div class="row">
     <div class="col-xl-6">
@@ -58,7 +57,6 @@
     {
     }
 
-
     string Realizar(string Id)
     {
         string URL = "https://api.adamix.net/apec/cedula/";
@@ -84,14 +82,8 @@
                 FechaDeDosis1 = vacun.fecahDosis1;
                 FechaDeDosis2 = vacun.fecahDosis2;
                 Validacion = true;
-
             }
         }
-    }
-
-    void ShowNotification(NotificationMessage message)
-    {
-        NotificationService.Notify(message);
     }
 
     //Codigo para poder visualizar los datos de la Base de Datos
@@ -115,6 +107,5 @@
         await service.DeleteProductAsync(vacun);
         await RefreshVacunados();
     }
-
 
 }

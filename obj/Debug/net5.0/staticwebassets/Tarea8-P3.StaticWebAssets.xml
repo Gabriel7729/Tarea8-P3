@@ -1,4 +1,4 @@
 ﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="/" Path="C:\Users\Lusan\Desktop\Tarea8-P3\obj\Debug\net5.0\scopedcss\bundle\" />
-  <ContentRoot BasePath="_content/Radzen.Blazor" Path="C:\Users\Lusan\.nuget\packages\radzen.blazor\3.1.6\build\..\staticwebassets\" />
+  <ContentRoot BasePath="/" Path="C:\Users\a\Downloads\Telegram Desktop\Tarea8-P3\Tarea8-P3\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="_content/Radzen.Blazor" Path="C:\Users\a\.nuget\packages\radzen.blazor\3.1.6\build\..\staticwebassets\" />
 </StaticWebAssets>
